@@ -1,20 +1,141 @@
-// BagusNumpangUpload.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+using namespace std;
+class MataKuliah
+{
+private:
+	float presensi;
+	float activity;
+	float exercise;
+	float tugasAkhir;
+public:
+	MataKuliah()
+	{
 
+
+		presensi = 0.0;
+		activity = 0.0;
+		exercise = 0.0;
+		tugasAkhir = 0.0;
+
+
+	}
+	virtual void namaMataKuliah() { return; }
+	virtual void inputNilai() { return; }
+	virtual void hitungNilaiAkhir() { return; }
+	virtual void cekKelulusan() { return; }
+
+	void setPresensi(float nilai)
+	{
+		this->presensi = nilai;
+	}
+	float getPresensi()
+	{
+		return presensi;
+	}
+
+	void setActivity(float nilai)
+	{
+		this->activity = nilai;
+	}
+	float getActivity()
+	{
+		return activity;
+	}
+
+	void setExercise(float nilai)
+	{
+		this->exercise = nilai;
+	}
+	float getExercise()
+	{
+		return exercise;
+	}
+
+	void setTugasAkhir(float nilai)
+	{
+		this->tugasAkhir = nilai;
+	}
+	float getTugasAkhir()
+	{
+		return tugasAkhir;
+	}
+};
+class Pemrograman : public MataKuliah
+{
+public:
+	void inputNilai() {
+
+		float presensi;
+		float activity;
+		float exercise;
+		float tugasAkhir;
+		string nama;
+
+		presensi = 0.0;
+		activity = 0.0;
+		exercise = 0.0;
+		tugasAkhir = 0.0;
+
+		return;
+	}
+
+	void hitungNilaiAkhir() {
+		float presensi;
+		float activity;
+		float exercise;
+		float tugasAkhir;
+
+
+
+
+
+		return;
+	}
+
+	void cekKelulusan() { return; }
+
+
+
+};
+
+class Jaringan : public MataKuliah
+{
+	void inputNilai() {
+		float activity;
+		float exercise;
+
+		activity = 0.0;
+		exercise = 0.0;
+
+		return;
+	}
+
+	void hitungNilaiAkhir() {
+		return;
+	}
+
+	void cekKelulusan() { return; }
+};
 int main()
 {
-    std::cout << "Hello World!\n";
+	char pilih;
+	MataKuliah* mataKuliah;
+	Pemrograman pemrograman;
+	Jaringan jaringan;
+
+
+	cout << "Pilih Mata Kuliah :" << endl;
+	cout << "1.Pemrograman " << endl;
+	cout << "2.Jaringan " << endl;
+	cout << "3.Keluar " << endl;
+
+	cin >> pilih;
+
+
+
+	return  0;
+
+
+
+
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
